@@ -54,9 +54,9 @@
 # of values, such as football league rankings or pain scale, the string values can be represented as sigle integers by preserving the order information between the values.
 # Lastly, the data set is required to be divided into two or three irrespective of the algorithm. These parts are crucial for model to be built appropriately. Machine Learning algorithms 
 # has to be first trained on the data available and then validated and tested. The train and test sets which are obtained from the data set by dividing the whole data set randomly to 70% - 30%.
-# Besides, we want to find find the optimum parameters for the model, in that case we can use cross validation method which divides whole data into small sub-parts randomly.
-# Then, when a single small part is used for testing the models for testing the parameters whether they are best or not, the remaining small sub parts of the whole data use as trying parameters
-# for building desirably optimum model.
+# Besides, we want to find find the optimum parameters for the model, in that case we can use cross validation method which divides whole data into small sub-parts randomly. 
+# Moreover, it is suitable when the data size is limited for building the model.Then, when a single small part is used for testing the models for testing the parameters whether 
+# they are best or not, the remaining small sub parts of the whole data use as trying parameters for building desirably optimum model.
 
 # In data pre-processing, user have a chance to visualize, understand and catch the relationships within the data set and ready the data accordingly for the model development. 
 # A good data preprocessing is prominent for attaining better results after the model predictions. The results are most of the time proportional to the quality of data.
@@ -86,4 +86,5 @@
 # it means our values would be assinged into new values between 0 and 1. However, feature extraction might be good to go so that we can eleminate unnecesarry features.
 # After that I would split the data set into two for training and test set but I would try different percentage of random splits such as 70-30, 75-30, 80-20 to see which model 
 # predicts better. I probably does not divide data set into three for validation this is because data is not complex and does not require to many tunning. The trial and error for
-# parameter search would be less time consuming.
+# parameter search would be less time consuming. However, since the data size is limited it would provide a good hand to optimize the model. After running train and test sets, we can
+# decide more on the number of relavant features and other pre processing steps such as feature scaling based on the model prediction scores. So, we can trial and error at that stage.
