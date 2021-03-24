@@ -6,3 +6,4 @@
 5) How you can explore countionus and discrete variables?
 6) Analyse the plot given below. (What is the plot and variable type, check the distribution and make comment about how you can preproccess it.)
 
+![image](https://user-images.githubusercontent.com/57831340/112313063-8220f080-8cb8-11eb-8571-a11ce055f922.png)
