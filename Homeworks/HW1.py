@@ -71,7 +71,6 @@
 # to describe the difference between the two is to visualize a simple plot. If plot becomes like a scatter graph it is discrete, if plot turnes into a line graph then it is 
 # continous variable.
 
-What is the plot and variable type, check the distribution and make comment about how you can preproccess it.
 # 6) First of all, since there are two peaks, this is a bimodal distribution. The trend of data distribution can be understood easier by looking at the blue line. I believe
 # that there are two hints about the variable type of the data. First, the x and y axis indicate that the values are numeric since they are float meaning each individual sample 
 # takes a range of values. Secondly, the blue line as well as the boxes reveal that there are not dotted lines or deperate boxes so the data are not discrete but it is continous.
