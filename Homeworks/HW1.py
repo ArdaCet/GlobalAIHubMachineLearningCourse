@@ -81,6 +81,10 @@ What is the plot and variable type, check the distribution and make comment abou
 # and extract those data points from the main data set to identify the outlier candidates. We can compare them with the remaining data points standart deviations and try to find out
 # which one to remove and which one to keep. This part can be carried out by just removing some part by scientific guess and train and test the model to see the presence or 
 # absence of the discarded sample points affect the model performance. Or we could utilize the isolation forest alogirthm from scikit learn and ensemble class. I think feature
-# scaling may not be extremely necessary for this case but normalization can be applied since data distribution is not gaussian so that we may have better structed data.
-
-#
+# scaling may not be extremely necessary for this case but normalization can be applied since data distribution is not gaussian so that we may have better structed data. I think
+# it is not a must to apply data binning because it looks like it's already binned so I think there is not critical number of noisy data that capable of affecting our model.
+# Similarly, I would not perform feature encoding because values are already float so do not need to convert them into another data representation. Besides, if I performed normalization,
+# it means our values would be assinged into new values between 0 and 1. However, feature extraction might be good to go so that we can eleminate unnecesarry features.
+# After that I would split the data set into two for training and test set but I would try different percentage of random splits such as 70-30, 75-30, 80-20 to see which model 
+# predicts better. I probably does not divide data set into three for validation this is because data is not complex and does not require to many tunning. The trial and error for
+# parameter search would be less time consuming.
