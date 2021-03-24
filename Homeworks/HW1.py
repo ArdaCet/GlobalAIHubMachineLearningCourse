@@ -28,14 +28,14 @@
 # The data probably will ahve outliers which are the rare instances of data which does not fit any of the class. In most cases, they are just errors or statistacally ignorable observations
 # Hence, it is important to detect the outliers. There are several ways to recognize and decide on whether the points are outliers or prominent sample points. These approches are
 # standart deviation, box plots / IQR calculation, and isolation forest algorithm from sckit learning. The standart deviation and IQR are more robust approaches for outlier detection
-# but isolation forest is an algoirthmic and complex approach for detection. The principle of IQR and standart deviation is if a given sample point(s) are above the (IQR and/or standart deviation)
+# but isolation forest is an algoirthmic and complex approach for detection. The principle of IQR and standart deviation is if a given sample point(s) are above the (IQR/standart deviation)
 # threshold then, the point(s) is outlier. The data set contents may not be in line with each other in terms of units, range, degrees of magnitute and etc. When this is the case,
 # the data should be sacaled so that each sample of data should be same in terms of their diferences. For this purpose, different techniques are available. The gradianet and 
 # distance based algorithms. The most common and basic ones are standardization and normalization. The feature scaling improves the performance of some machine learning algorithms
 # and does not work at all for others. Normalization is a scaling technique in which values are shifted and rescaled so that they end up ranging between 0 and 1. Standardization 
 # is another scaling technique where the values are centered around the mean with a unit standard deviation. This means that the mean of the attribute becomes zero and the resultant
 # distribution has a unit standard deviation. The prefernce of these two technique depends on algorithm to be used and the problem itself. Normalization is good to use when you 
-# know that the distribution of your data does not follow a Gaussian distribution as oppose to standardization. Standardizationcan be helpful in cases where the data follows a 
+# know that the distribution of your data does not follow a Gaussian distribution as oppose to standardization. Standardization can be helpful in cases where the data follows a 
 # Gaussian distribution and does not have a bounding range. So, even if there are outliers in the data, they will not be affected by the technique. The data values can be diverged
 # and it makes it difficult for model to differentiate (categorize) them for training and testing or similarly the noise data may flactuate the data distribution so that some sample
 # points are so intertwined that the points cause unordered distribution. These two situations can be solved by binning (bucketing) the data set. The binning is simply seperating
@@ -71,4 +71,16 @@
 # to describe the difference between the two is to visualize a simple plot. If plot becomes like a scatter graph it is discrete, if plot turnes into a line graph then it is 
 # continous variable.
 
-# 6) 
+What is the plot and variable type, check the distribution and make comment about how you can preproccess it.
+# 6) First of all, since there are two peaks, this is a bimodal distribution. The trend of data distribution can be understood easier by looking at the blue line. I believe
+# that there are two hints about the variable type of the data. First, the x and y axis indicate that the values are numeric since they are float meaning each individual sample 
+# takes a range of values. Secondly, the blue line as well as the boxes reveal that there are not dotted lines or deperate boxes so the data are not discrete but it is continous.
+# Since, the EDA step has been conduted already, we can directly skip to the pre processing step. After understanding the data, identfying variable types, and distribution types,
+# I would search for duplicates, missing values and outliers. Especially, the first two are the simplest to overcome using DF[DF.duplicated(keep=False)] and DF.isnull().sum(). 
+# The missing values can be replaced by the median values since data distribution is not standard. For the outlier detection, we may try to limit the max x-y values via xlim, ylim
+# and extract those data points from the main data set to identify the outlier candidates. We can compare them with the remaining data points standart deviations and try to find out
+# which one to remove and which one to keep. This part can be carried out by just removing some part by scientific guess and train and test the model to see the presence or 
+# absence of the discarded sample points affect the model performance. Or we could utilize the isolation forest alogirthm from scikit learn and ensemble class. I think feature
+# scaling may not be extremely necessary for this case but normalization can be applied since data distribution is not gaussian so that we may have better structed data.
+
+#
