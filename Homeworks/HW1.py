@@ -67,6 +67,8 @@
 # there are spaces between them then, this indicates the presenc of discrete variables. Unlike discrete data, the continues data histogram should plot clustered bars
 # where there is no space between the boxes at all, it means we are dealing with continues variables. The better way of representing this is ploting a trend line like line
 # which clearly dictates whether the data includes discrete or continues variables. This line will be calculated based on the average value of the points from left to right
-# on the histogram. If the line has cuts, this exhibits the values are discrete because values has a particular range between the sample points.
+# on the histogram. If the line has cuts, this exhibits the values are discrete because values has a particular range between the sample points. Furthermore, a simplest way
+# to describe the difference between the two is to visualize a simple plot. If plot becomes like a scatter graph it is discrete, if plot turnes into a line graph then it is 
+# continous variable.
 
 # 6) 
