@@ -10,13 +10,14 @@
 **Note:** Your homeworks can be formats like ".ipynb" and ".py". **Not ".txt" files!!** Make sure that your codes works.  
 
 ## Project Name
-Description of your project.
+Handling big datasets and anakyzing them with various machine learning models
 
 ## Requirements
 ```
-Some python libraries
-Some python libraries
-Some python libraries
+numpy
+pandas
+matplotlib
+scikit-learn
 ```
 ---
 
